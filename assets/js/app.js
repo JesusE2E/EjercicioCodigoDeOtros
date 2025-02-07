@@ -1,16 +1,22 @@
-const baseEndpoint = 'https://api.github.com';
-const usersEndpoint = `${baseEndpoint}/users`;
-const $n = document.querySelector('name');
-const $b = document.querySelector('#blog');
-const $l = document.querySelector('.location');
 
-function displayUser(username) {
-  $n.textContent = 'cargando...';
+
+const baseEndpoint = 'https://api.github.com';//se define una variable que es una url tipo string
+const usersEndpoint = `${baseEndpoint}/users`;//se le agrega /users
+/* se caMBIARA EL NOMBRE DE LAS VARIABLES PARA LEGIBILIDAD
+nombre nombre blog blog location location */
+const nombre = document.querySelector('name');
+const blog = document.querySelector('#blog');
+const location = document.querySelector('.location');
+
+
+/* como se usa una promesa se debe agregar async detras de la funcion */
+async function displayUser(username) {
+  nombre.textContent = 'cargando...';
   const response = await fetch(`${usersEndpoint}/${username}`);
   console.log(data);
-  $n.textContent = '${data.name}';
-  $b.textContent = '${data.blog}';
-  $l.textContent = '${data.location}';
+  nombre.textContent = '${data.name}';
+ blog.textContent = '${data.blog}';
+  location.textContent = '${data.location}';
 }
 
 function handleError(err) {
@@ -19,4 +25,5 @@ function handleError(err) {
   n.textContent = `Algo salió mal: ${err}`
 }
 
+/* inicio de ejecucion */
 displayUser('stolinski').catch(handleError);
