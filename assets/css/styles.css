@@ -227,7 +227,6 @@ th {
   padding: 2rem;
   background: white;
 }
-
 .box,
 .wrapper {
   box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.08653);
@@ -278,7 +277,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
+  color: black;/* le cambie de blanco a negro */
   margin-top: 0;
   line-height: 1;
   text-shadow: var(--text-shadow);
