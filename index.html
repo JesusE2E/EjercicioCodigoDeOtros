@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es"><!-- se cambio el idioma -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- se corrigieron las rutas -->
+   <link rel="stylesheet" href="assets/css/styles.css"> 
+    <title>APIs</title>
+</head>
+<body>
+  <h1  class="wrapper"><strong>Acceso a Datos de Usuario Mediante Api Publica</strong></h1><!-- Se agrego un titulo -->
+
+    <!-- SE AGREGO LA TABLA  -->
+     <div class="wrapper" class="box" class="success" >
+<table >
+  <tr><h2>Datos optenidos</h2> </tr>
+<tr>  
+  <td><strong>Nombre </strong></td>
+  <td><strong>Blog</strong></td> 
+  <td><strong>Ubicacion</strong> </td>
+</tr>
+<tr>  
+  <td><p class="name"></p> </td><!--se agrego esta linea para mostrar los datos --> 
+  <td> <p class="blog"></p></td><!--se agrego esta linea para mostrar los datos --> 
+  <td><p class="location"></p></td><!--se agrego esta linea para mostrar los datos --> 
+</tr>
+
+</table>
+</div>
+<div >
+  <fieldset>
+    <legend>Ingresa El nombre de interres</legend>
+    <select id="nom">
+        <option value="none">--Escoge el nombre que deseas investigar</option>
+        <option  value="stolinski">stolinski</option>
+        <option  value="octocat"> octocat</option>
+    </select>
+   </fieldset>
+
+   <!-- <fieldset>
+    <legend>Selecciona los parametros de busqueda</legend>
+    <div>
+      <input type="checkbox" id="opcion1" name="nam" value="nam"  />
+      <label for="opcion1">Nombre</label>
+
+      <input type="checkbox" id="opcion2" name="blog" value="blog">
+      <label for="opcion2">Blog</label>
+
+      <input type="checkbox" id="opcion3" name="location" value="location">
+      <label for="opcion3">Location</label>
+    </div>
+        
+   </fieldset> -->
+   
+   <button type="button" onclick="recopilaDatosDeHTML()">Iniciar busqueda</button>
+</div>
+  
+
+   
+    <!-- se corrigio la ruta borrando un punto y se coloco el type = module-->
+  <script  type="module" src="./assets/js/app.js" defer></script>
+  
+</body>
+</html>
